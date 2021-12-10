@@ -8,7 +8,11 @@ A [Brainfuck](https://en.wikipedia.org/wiki/Brainfuck#Language_design) interprat
 
 ````awk '{print $1,$2,$1+$2}' file````
 
-will print and sum the first and second coloms of the file.
+Will print out the first and second columns of the file along with the sum of the columns.
+
+```awk 'BEGIN {sum=0} {sum += $1} END {print sum}'```
+
+Will sum the first column.
 
 However it turns out that awk is turing complete...
 
